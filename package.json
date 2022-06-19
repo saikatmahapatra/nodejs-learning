@@ -1,10 +1,27 @@
 {
+  "name": "nodejs-learning",
+  "version": "1.0.0",
+  "description": "NodeJs learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikatmahapatra/nodejs-learning.git"
+  },
+  "author": "Saikat Mahapatra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saikatmahapatra/nodejs-learning/issues"
+  },
+  "homepage": "https://github.com/saikatmahapatra/nodejs-learning#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
   "devDependencies": {
     "formidable": "^2.0.1",
-    "nodemailer": "^6.7.2"
-  },
-  "dependencies": {
-    "express": "^4.17.2",
-    "mysql": "^2.18.1"
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15"
   }
 }
