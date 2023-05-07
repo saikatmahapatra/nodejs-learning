@@ -7,7 +7,9 @@ eventEmitter.on('myEvent', myEvent);
 function myEvent(){
   console.log('### my event ####');
 }
-http.createServer(function (req, res) {
+const hostname = '127.0.0.1';
+const port = 3000;
+const server = http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   //console.log(req)
   var queryString = url.parse(req.url, true).query;
@@ -19,4 +21,7 @@ http.createServer(function (req, res) {
   eventEmitter.emit('myEvent');
   res.end('\n end');
 
-}).listen(8080);
+});
+server.listen(port, hostname, ()=>{
+console.log(`Server is running at http://${hostname}:${port}`);
+});
