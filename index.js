@@ -12,6 +12,7 @@ http.createServer(function (req, res) {
   //console.log(req)
   var queryString = url.parse(req.url, true).query;
   res.write('URL is '+req?.url+' >>> hello world');
+  res.write('Read ENV vars ' + JSON.stringify(process.env));
   //console.log(queryString);
   var urlObj = url.parse(req.url, true);
   console.log(urlObj);
