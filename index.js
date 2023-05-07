@@ -10,8 +10,8 @@ function myEvent(){
 const hostname = '127.0.0.1';
 const port = 3000;
 const server = http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  //console.log(req)
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
   var queryString = url.parse(req.url, true).query;
   res.write('URL is '+req?.url+' >>> hello world');
   res.write('Read ENV vars ' + JSON.stringify(process.env));
